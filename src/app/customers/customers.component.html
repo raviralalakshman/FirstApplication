@@ -1,0 +1,55 @@
+<app-nav></app-nav>
+<div class="container">
+    <div>
+        <h2>Hostel NewCustomers</h2>
+        <form>
+            <div class="row">
+                <div class="col-sm-3">
+            <div class="form-group">
+            <label>CustomerName</label>
+            <input type="text" class="form-control" placeholder="Name">
+            </div>
+        </div>
+        <div class="col-sm-3 col-sm-offset-1">
+            <div class="form-group">
+             <label>Mobile</label>
+              <input type="text" class="form-control" placeholder="Mobile">
+             </div>
+            </div>
+            <div class="col-sm-3 col-sm-offset-1">
+             <div class="form-group">
+                 <label>Company</label>
+                 <input type="text" class="form-control" placeholder="Company">
+             </div>
+            </div>
+            </div>
+            <label>RoomDetails</label>
+            <div class="row">
+                    <div class="col-sm-3">
+                <div class="form-group">
+                        
+                <label>Floor</label>
+                <select class="form-control">
+                    <option *ngFor ="let Floor of Floors" [value]="Floor">
+                        {{Floor.Name}}
+                    </option>
+                </select>
+                </div>
+            </div>
+            <div class="col-sm-3 col-sm-offset-1">
+                <div class="form-group">
+                 <label>Room</label>
+                  <input type="text" class="form-control" placeholder="Mobile">
+                 </div>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1">
+                 <div class="form-group">
+                     <label>CompanyId</label>
+                     <input type="text" class="form-control" placeholder="Company">
+                 </div>
+                </div>
+                </div>
+        </form>
+        <input type="button" value="Submit Data" (click)="Add()" />
+    </div>
+</div>

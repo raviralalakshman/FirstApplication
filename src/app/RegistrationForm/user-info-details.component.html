@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card mx-4">
+        <div class="card-body p-4">
+          <form [formGroup]="usergroup" (ngSubmit)="submitUserForm()">
+            <h1 style="text-align:center;color: red ">Register</h1>
+
+            <div class="input-group mb-3">
+              <label>Username</label>
+              <input type="text" class="form-control" #refName placeholder="Username" (click)="Event()" [(ngModel)]="userdetails.UserName"
+                formControlName="Name">
+              <div *ngIf="usergroup.controls.Name.errors && show" class="alert alert-danger">
+                Please enter Your Name
+              </div>
+            </div>
+
+            
+            <div class="input-group mb-3">
+              <label>password</label>
+              <input type="password" class="form-control" placeholder="Password" [(ngModel)]="userdetails.PassWord"
+                formControlName="pass">
+                <div *ngIf="usergroup.controls.Name.errors && show" class="alert alert-danger">
+                    Please enter Your PassWord
+                  </div>
+            </div>
+            <div class="input-group mb-3">
+              <label>conformPassword</label>
+              <input type="password" class="form-control" placeholder="conformPassword"
+                [(ngModel)]="userdetails.ConformPassWord" formControlName="conform">
+                <div *ngIf="usergroup.controls.Name.errors && show" class="alert alert-danger">
+                    Please enter Your ConformPassWord
+                  </div>
+            </div>
+            <div class="input-group mb-4">
+              <label>Email</label>
+              <input type="text" class="form-control" placeholder="Email" [(ngModel)]="userdetails.Email"
+                formControlName="mail">
+                <div *ngIf="usergroup.controls.Name.errors && show" class="alert alert-danger">
+                    Please enter Your Email
+                  </div>
+            </div>
+            <div class="input-group mb-4">
+              <label>Mobile</label>
+              <input type="text" class="form-control" placeholder="Contact No" [(ngModel)]="userdetails.mobile"
+                formControlName="mobile">
+                <div *ngIf="usergroup.controls.Name.errors && show" class="alert alert-danger">
+                    Please enter Your Mobile
+                  </div>
+            </div>
+            <div class="input-group mb-4">
+              <label>address</label>
+              <input type="text" class="form-control" placeholder="Address" [(ngModel)]="userdetails.Address"
+                formControlName="Address">
+                <div *ngIf="usergroup.controls.Name.errors && show" class="alert alert-danger">
+                    Please enter Your Address
+                  </div>
+            </div>
+            <br>
+            <button type="submit" class="Button1">Add User</button><br><br>
+            <button type="Close" class="Button2" (click)="Closeform()">Close</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

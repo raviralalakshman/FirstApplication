@@ -1,0 +1,25 @@
+table{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+th{
+    background-color: green;
+    color: white;
+    text-align:center;
+}
+td{
+    background-color:white;
+    text-align:center;
+}
+.border_form{
+    border: 1px solid ;
+    border-color: beige;
+    padding: 10px;
+    box-shadow: 5px 5px #888888;
+    margin-left: 54px;
+    margin-right: 48px;
+    margin-top: 0px;
+    /* margin-bottom: -6px; */
+    /* height: 130%; */
+}

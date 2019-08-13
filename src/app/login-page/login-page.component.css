@@ -1,0 +1,83 @@
+.Image{
+    background-image: url('/assets/Images/Images1.jpg');
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+    margin-left: 79px;
+    margin-right: 79px;
+}
+.message{
+    color: red;
+}
+.SecImage{
+   background-image: url('/assets/Images/Login.png');
+   background-repeat: no-repeat; 
+   background-position: center;
+   background-size: cover;
+}
+.btn-styles{
+    padding: 5px 10px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color:black;
+    background-color:red;
+    border: none;
+    border-radius: 15px;
+    height: 100%;
+    width: 100%; 
+}
+button.btn-styles:hover {
+    /*color: black; */
+    background-color: white;
+}
+.btn2-styles{
+    padding: 5px 10px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color:white;
+    background-color:black;
+    border: none;
+    border-radius: 15px;
+    height: 100%;
+    width: 100%; 
+}
+.btn2-styles:hover {
+    background-color: green;
+}
+.btn2H-styles{
+    padding: 5px 10px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color:white;
+    background-color:black;
+    border: none;
+    border-radius: 15px;
+    height: 100%;
+    width: 100%; 
+}
+.btn2H-styles:hover {
+    background-color: rgb(185, 27, 27);
+}
+
+/*Styling For text Boxes */
+
+.Text{
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    border-bottom-left-radius: 16px !important;
+    border-top-left-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+    padding: 10px;
+}
+label {
+    
+    font-size: 16px;
+}

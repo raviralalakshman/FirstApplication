@@ -1,0 +1,31 @@
+<div class="Title_Nav">
+    <h3 >Welcome to the application</h3>
+<div class="row ">
+<div class="Logout_icon navbar ">
+       <ul class=" nav nav-tab">
+       <li class="List-iteams"><a [routerLink]="['/MobilePage']">Mobiles</a></li>
+       <li class="active"><a [routerLink]="['/Customers']">customers</a></li>
+       <li class="active"><a [routerLink]="['/Vendors']">vendors</a></li>
+       <li class="active"><a [routerLink]="['/edit/0']">staff</a></li>
+       <li class="active"><a [routerLink]="['/StaffList']">StaffList</a></li>
+       </ul>  
+       
+ </div> 
+ <div class="Logout_icon bar">
+    <button style="background-color: black;margin-right: 18px;"  data-tooltip="Hovered content" (click)=returntologin()><i class="fa fa-sign-out"></i></button>
+
+    <button style="background-color:white;" (click)="ToUrl()"><i class="fa fa-facebook-square" style="font-size:45px;color:blue"></i>
+      </button>
+ </div>
+</div>
+</div>
+ <div class="body">
+
+    <router-outlet name="body" ></router-outlet>
+   
+  </div>
+ 
+
+  
+
+

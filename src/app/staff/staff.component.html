@@ -1,0 +1,42 @@
+<app-nav></app-nav>
+<div class="container">
+    <div>
+        <form>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>FullName</label>
+                        <input type="text" class="form-control" placeholder="FullName" [(ngModel)]="staff.StaffName" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1">
+                    <div class="form-group">
+                        <label>Mobile</label>
+                        <input type="text" class="form-control" placeholder="Mobile" [(ngModel)]="staff.Mobile" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1">
+                    <div class="form-group">
+                        <label>AdharNumber</label>
+                        <input type="text" class="form-control" placeholder="AdharNo" [(ngModel)]="staff.AdharNo" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <select class="form-control" [(ngModel)]="staff.Gender" (change)="SelectGender()" [ngModelOptions]="{standalone: true}">
+                        <option *ngFor="let staff of Genders" [ngValue]="staff.Id" >
+                        {{staff.Gender}}
+                        </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <input type ="button" value="Submit" class="btn btn-primary" (click)="AddStaff()">
+    </div>
+</div>
+
+

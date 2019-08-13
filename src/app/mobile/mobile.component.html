@@ -1,0 +1,43 @@
+<app-nav></app-nav>
+<div class="container">
+    <div [hidden]="submitted">
+        <h1>MobileForm</h1>
+        <form (ngSubmit)="onSubmit()" #courseForm="ngForm">
+            <div class="form-group">
+            <label for="id">MobileId</label>
+            <input type="text" class="form-control" required [(ngModel)]="mobile.MobileId" name="id" #id="ngModel">
+            <div [hidden]="id.valid || id.pristine" class="alert alert-danger">
+                Course Id is required
+              </div>
+            </div>
+            <div class="form-group">
+                <label for="id">MobileName</label>
+                <input type="text" class="form-control" required [(ngModel)]="mobile.MobileCompany" name="id" #id="ngModel">
+                <div [hidden]="id.valid || id.pristine" class="alert alert-danger">
+                    Mobile name is required
+                </div>
+            </div>
+            <div class="form-group">
+                    <label for="id">Quantity</label>
+                    <input type="text" class="form-control" required [(ngModel)]="mobile.Quantity" name="id" #id="ngModel">
+                    <div [hidden]="id.valid || id.pristine" class="alert alert-danger">
+                        Quantity is required
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="!courseForm.form.valid">Submit</button>
+        </form>
+        <br>
+        <table border="1">
+            <tr>
+                <th>MobileId</th>
+                <th>MobileCompany</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>{{mobile.MobileId}}</td>
+                <td>{{mobile.MobileCompany}}</td>
+                <td>{{mobile.Quantity}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

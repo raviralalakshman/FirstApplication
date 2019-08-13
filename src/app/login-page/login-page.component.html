@@ -1,0 +1,76 @@
+<div class="Image">
+  <h1 style="text-align: center;color: red">Login Page</h1>
+  <div class="container" style="padding-top:60px;">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card-group ">
+          <div class="card p-4 SecImage">
+            <div class="card-body">
+              <form name="form">
+                <h1 style="text-align:center;color: white" >User login</h1>
+                 <br>
+                <div class="input-group mb-3">
+                  <label style="color: rgb(25, 7, 58)">UserName</label>
+                  <input type="text" name="UserName"[(ngModel)]="Crediantials.UserName" class="form-control Text"
+                    placeholder="Email" required>
+                </div> <br>
+                <div class="input-group ">
+                  <label style="color: rgb(10, 7, 24)">Password</label>
+                  <input type="password" name="Passward" [(ngModel)]="Crediantials.Password" class="form-control Text"
+                    placeholder="Password" id="Pass">
+                  <div ng-click="toggleShowPassword()"
+                    ng-class="{'fa fa-eye': showPassword,'fa fa-eye-slash': !showPassword}" style="cursor: pointer;">
+                  </div>
+
+                </div>
+                <br>
+                <input type="checkbox" (click)="myFunction()"><span style="color: tomato">Show Password</span> 
+                <br>
+                <br>
+                <span style="color: rgb(175, 124, 124)">------------------------------------------------------------------------------------------------------</span><br>
+
+                <br>
+                <div class="row">
+                  <div class="col-3">
+                    <button type="submit" class="btn-styles"
+                      (click)="CheckLogin(Crediantials.UserName,Crediantials.Password)">Login</button>
+                  </div>
+                 
+                  <div class="col-sm-4">
+                    <a [routerLink]="['/UserInfo']"><button type="button" class="btn2-styles" style="margin-left: 20px"
+                        (click)=AddAccount()>CreareAccount</button></a>
+                  </div>
+                  <div class="col-5 text-right">
+                    <button type="button" class="btn2H-styles" (click)="FB()">Forgot password</button>
+                  </div>
+                </div>
+                <br>
+                <div *ngIf="show" class="myDiv">
+                  <div class="input-group mb-3">
+                    <div><span class="message">{{Message}}</span> </div>
+                    <label style="color: rgb(25, 7, 58)">OldPassword</label>
+                    <input type="text" name="UserName" [(ngModel)]="Crediantials.OldPassword" class="form-control sty1"
+                      placeholder="OldPassword">
+                  </div> <br>
+                  <div class="input-group ">
+                    <label style="color: rgb(25, 7, 58)">NewPassword</label>
+                    <input type="password" name="Passward" [(ngModel)]="Crediantials.NewPassword" class="form-control"
+                      placeholder="NewPassword">
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-3">
+                      <button type="submit" class="btn-styles"
+                        (click)="SubmitPassword(Crediantials.OldPassword,Crediantials.NewPassword)">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
